@@ -18,54 +18,63 @@
 5개월간 진행했던 프로젝트들 입니다!  
 팀장으로서는 운영적인 면과 ***팀원들 학습 관리***, 프로젝트 일정 관리 등 많은 경험을 할 수마
 
-> 여행일정 추천 _(내일배움캠프 - 4416조 팀프로젝트)_
+## 1. 🫳 NailArt
+> 이미지오버레이를 통한 디자인입히기 및 가게추천 (핵심프로젝트)
 >
-> - 개발기간 : 2022.07.07-09.02
-> - 핵심 역할 : 팀장, TSP 알고리즘을 활용한 여행추천 알고리즘 작성, React를 사용한 SPA 개발
+> - 개발기간 : 23.10.25 ~ 23.12.08
+> - 핵심 역할 : 전체적인 프론트 총괄, 메인페이지 & 마이페이지 & 가게등록페이지 화면구성 및 기능
 >
 >> Back-end
 >> - Language : python3  
 >> - Skill : Django, Django-rest-framework, PostgreSQL
 >> 
->> [프로젝트 상세 설명(Back-end)](https://github.com/kimphysicsman/MyLittelTrip_backend)  
+>> [프로젝트 상세 설명(Back-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC.git)  
 >
 >> Front-end
 >> - Language : javascript
 >> - Skill : React.js
 >>
->> [프로젝트 상세 설명(Front-end)](https://github.com/kimphysicsman/MyLittelTrip_frontend_react)
+>> [프로젝트 상세 설명(Front-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact.git)
 
 <br />
 
 ## 2. 📸 Picstory
 
-> AI 기술을 활용한 이미지 태깅 기반의 사진첩 서비스
+> AI 기술을 활용한 이미지 태깅 기반의 사진첩 서비스 (실전 프로젝트)
 >
-> - 개발기간 : 2022.06.28-07.06
-> - 핵심 역할 : 팀장, Generative model를 이용한 신발 스타일링 기능 구현
+> - 개발기간 : 2024.2.1 ~ 2024.2.27
+> - 핵심 역할 : python Flask & EC2 & 도커환경 구축 , ai모델들 API생성 & 서빙 , faiss모델 Spring Boot,React와 연결, 결제페이지(I'm port API) & 아이디,비밀번호 찾기페이지 화면구성 및 기능,  회원가입,로그인 페이지 화면구성
 >> 프로젝트 설명
 >> - 사용자가 사진 업로드 시 자동으로 태그를 지정하여 분류하는 서비스를 제공
->> - 사용자가 폴더 생성 시 태그를 기반으로 한 사진 분류의 용이성을 제공
+>> - 사용자가 폴더 생성 시 태그를 기반으로 사진 분류의 용이성을 제공
 >> - 이미지 검색을 통한 유사한 이미지 검색 기능을 제공
->> - 갈수록 늘어가는 개인의 사진을 정리하는데 필요한 시간과 수고를 덜어주고자 제작
+>> - 갈수록 늘어가는 개인의 사진을 정리하는데에 필요한 시간과 수고를 덜어주고자 제작
+>
+>> 프로젝트 특장점
+>> - 사진 업로드 시 자동으로 태그들이 지정됨
+>> - 폴더 생성 후 사진 분류 시 사진에 부여된 태그를 활용해 태그 단위로 일괄적인 옮기기 가능
+>> - 사진 한장에 여러 태그를 부여함으로써 사용자가 찾고자 하는 사진의 정확성을 높임
+>> - 프리미엄 결제 시 기본으로 제공하는 태그에 추가적으로 사용자가 원하는 커스텀태그 생성 가능
 >
 >> Back-end
 >> - Language : java 
 >> - Skill : Spring Boot, Naver API, I'm Port API
 >> 
->> [프로젝트 상세 코드(Back-end)](https://github.com/kimphysicsman/MyLittelTrip_backend)  
+>> [프로젝트 상세 코드(Back-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC.git)  
 >
 >> Front-end
 >> - Language : javascript
 >> - Skill : React.js
 >>
->> [프로젝트 상세 코드(Front-end)](https://github.com/kimphysicsman/MyLittelTrip_frontend_react)
+>> [프로젝트 상세 코드(Front-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact.git)
 >
->> Modeling
+>> Modeling 
 >> - Language : python
->> - Skill : VS code, Flask, Docker
-> - 구현내용
-> 
+>> - Skill : VS code, Flask, Docker, EC2
+>> - Model
+>>> - faiss : 벡터탐색알고리즘 이용해 이미지들의 특징벡터 추출하고 다른 이미지들의 특징벡터와 비교하여 비슷한 이미지들을 출력
+>>> - Zeroshot detection(GroundingDINO) : 이미지와 태그목록을 모델에 입력하면 태그목록 중에서 이미지에서 검출한 태그들을 출력함
+>>> - VQA(Blip) : 이미지와 질문(텍스트)를 모델에 입력하면 하면 질문의 결과를 'yes' or 'no'로 응답하여 'yes'에 해당하는 이미지를 출력하게함으로써 사용자에게 커스텀태그 기능을 부여함.
 >
 <div align="center">
 	<P>기술스택</P>
@@ -79,6 +88,48 @@
 
 <br />
 <br />
+<details>
+  <summary>핵심 기능 화면</summary>
+	
+  #### 1. 메인 페이지
+  
+
+ #### 2. 로그인 / 회원가입
+
+
+[로그인 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Login.jsx#L9)
+
+[회원가입 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Join.jsx#L11)
+
+ #### 3.
+ ![-Clipchamp3-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/b5dfbf08-3f8d-4344-bc32-18f00510663f)
+
+[커뮤니티 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Community.jsx#L21)
+
+[커뮤니티 최신글 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/CommunityMasonry.jsx#L12)
+
+[커뮤니티 인기글 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/ComSortMansory.jsx#L12)
+
+[커뮤니티 글 상세보기 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/CommunityDetail.jsx#L24)
+ 
+ #### 4. 마이페이지
+  ![-Clipchamp5-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/3d90494b-3cd9-4401-8763-cca21fa97364)
+  
+[마이페이지 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Mypage.jsx#L13)
+  
+ #### 5. 이미지 업로드 체형 분석 페이지
+![-Clipchamp6-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/275a7a94-302d-44cf-bf7c-bb4875c91fef)
+
+ #### 6. 결과페이지 및 아바타 페이지
+![제목 없는 동영상 - Clipchamp로 제작 (2)](https://github.com/yusuyeon1111/portfolio/assets/142488306/48d39fef-468b-41a8-bf2a-b8538254e20b)
+
+ #### 7. 사이즈 입력 체형 분석 페이지
+![제목 없는 동영상 - Clipchamp로 제작 (1)](https://github.com/yusuyeon1111/portfolio/assets/142488306/f2eb06b4-19fb-4061-9660-477c28c7c9d0)
+
+ #### 8. 관리자 페이지
+ ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/919ebf59-9f54-4013-976c-cf189de56682)
+
+</details>
 
 
 ## :pushpin: Projects

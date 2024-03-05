@@ -92,42 +92,46 @@
   <summary>핵심 기능 화면</summary>
 	
   #### 1. 메인 페이지
+  ![메인페이지](https://github.com/ggody2/profiles/assets/117277864/beaa4306-5574-4ca3-a016-b9037d4a55bb)
   
-
  #### 2. 로그인 / 회원가입
+ ![로그인회원가입](https://github.com/ggody2/profiles/assets/117277864/b3aef17b-bee3-45e1-a524-3483571a50d5)
 
+[로그인 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/Login.jsx)
 
-[로그인 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Login.jsx#L9)
+[회원가입 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/Join.jsx)
 
-[회원가입 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Join.jsx#L11)
+ #### 3. 사진업로드 및 자동태그생성 
+ ![사진업로드](https://github.com/ggody2/profiles/assets/117277864/f3520e9d-b65e-427c-ad0b-a99a5b0c5f30)
 
- #### 3.
- ![-Clipchamp3-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/b5dfbf08-3f8d-4344-bc32-18f00510663f)
+[사진업로드 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/photoAlbum/PAMenu.jsx)
 
-[커뮤니티 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Community.jsx#L21)
-
-[커뮤니티 최신글 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/CommunityMasonry.jsx#L12)
-
-[커뮤니티 인기글 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/ComSortMansory.jsx#L12)
-
-[커뮤니티 글 상세보기 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/CommunityDetail.jsx#L24)
+[자동태그생성 코드](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC/blob/f6071d78fb71de21d98be24cc1e487097b8e79fa/Picstory/src/main/java/com/picstory/service/PicstoryService.java)
  
- #### 4. 마이페이지
-  ![-Clipchamp5-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/3d90494b-3cd9-4401-8763-cca21fa97364)
+ #### 4. 폴더생성 및 즐겨찾기 
+![폴더생성](https://github.com/ggody2/profiles/assets/117277864/b8a1d6b8-16f9-42ee-ba90-5a981ed154df)
+
+[폴더생성 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/photoAlbum/PALeftSide.jsx)
   
-[마이페이지 코드 보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/2166e393216249129134d9dae6d1bd3a46d2a41e/src/components/Mypage.jsx#L13)
-  
- #### 5. 이미지 업로드 체형 분석 페이지
-![-Clipchamp6-ezgif com-video-to-gif-converter](https://github.com/yusuyeon1111/portfolio/assets/142488306/275a7a94-302d-44cf-bf7c-bb4875c91fef)
+ #### 5. 유사이미지 검색 
+![유사이미지](https://github.com/ggody2/profiles/assets/117277864/6f76d638-ed6a-4624-98eb-91c5f0aca13f)
 
- #### 6. 결과페이지 및 아바타 페이지
-![제목 없는 동영상 - Clipchamp로 제작 (2)](https://github.com/yusuyeon1111/portfolio/assets/142488306/48d39fef-468b-41a8-bf2a-b8538254e20b)
+[유사이미지 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/photoAlbum/PAMenu.jsx)
 
- #### 7. 사이즈 입력 체형 분석 페이지
-![제목 없는 동영상 - Clipchamp로 제작 (1)](https://github.com/yusuyeon1111/portfolio/assets/142488306/f2eb06b4-19fb-4061-9660-477c28c7c9d0)
+[유사이미지 코드](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC/blob/f6071d78fb71de21d98be24cc1e487097b8e79fa/Picstory/src/main/java/com/picstory/service/PicstoryService.java)
 
- #### 8. 관리자 페이지
- ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/919ebf59-9f54-4013-976c-cf189de56682)
+ #### 6. 마이페이지 및 결제페이지
+ ![마이페이지](https://github.com/ggody2/profiles/assets/117277864/a81f27c8-e7a3-47a7-9383-92a89a69f4e3)
+
+[마이페이지 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/MyInfo.jsx)
+
+ [결제페이지 컴포넌트](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact/blob/73baa2ec86e1f56c992df16dc271b1065d21b3e6/src/components/Payment.jsx)
+ 
+
+ #### 7. 커스텀태그 생성
+ ![커스텀태그](https://github.com/ggody2/profiles/assets/117277864/73443ce2-fc4a-4fe2-8bf4-07216cf7a9c8)
+
+ [커스텀태그 코드](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC/blob/f6071d78fb71de21d98be24cc1e487097b8e79fa/Picstory/src/main/java/com/picstory/service/PicstoryService.java)
 
 </details>
 
@@ -220,6 +224,64 @@
 </details>
 <details>
 <summary>트러블 슈팅</summary>
+	
+#### 1. 윈도우에서 
+<br/>
+이메일 인증을 위해 이메일 API인 email.js를 사용했습니다.
+<br/>
+
+![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/deb5ca66-6f01-4579-b827-d50302f7055c)
+
+<br/>
+
+[코드 보러 가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/05e84843bfaef66c4b6417432049e14dc2a611a1/src/components/Join.jsx#L23)
+
+<br/>
+
+
+#### 2. 무한 스크롤 기능 구현
+모바일 환경에 최적화를 위해 게시판 형식의 기본 페이징이 아닌, 무한 스크롤 방식을 사용함.
+기존의 페이징은 offset과 limit을 사용해서 페이징할 범위를 정하지만, 이 방식은 초반에는 효율이 나쁘지 않지만 뒤로 갈수록 효율이 급격히 떨어진다는 단점이 있어 사용하지 않고, JPA의 pageable 기능을 사용해 구현했습니다.
+<br/>
+ spring Boot 
+ <br/>
+ @post controller
+ <br/>
+ 
+ ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/65c1da60-66a0-452a-9d12-e09afb0673b0)
+ 
+ <br/>
+ 
+ ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/e83e393c-8f3c-45c5-ba89-ef1f814407f9)
+ 
+<br/>
+
+React 
+
+<br/>
+useInview를 활용하여 페이지 끝에 도달할 시 페이지 넘버를 증가시켜 로드 했습니다.
+
+<br/>
+
+![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/f97031a6-9097-4960-a890-b45568d24586)
+
+<br/>
+
+페이지넘버를 get방식으로 요청해 이미지를 로드 하였습니다.
+
+<br/>
+
+![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/acf1d653-b0b1-471f-ae06-410840c1216f)
+
+<br/>
+
+[코드보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/05e84843bfaef66c4b6417432049e14dc2a611a1/src/components/CommunityMasonry.jsx#L76)
+
+<br/>
+ [느낀점]
+ <br/>
+ JPA를 처음 사용하다 보니 어려움을 겪었으나 수많은 시행착오와 구글링을 통해 구현할 수 있었으며, JPA에 대한 이해도를 올릴 수 있었습니다.
+</details>
 	
 #### 1. 이메일 API 사용
 <br/>

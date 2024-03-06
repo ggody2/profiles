@@ -134,6 +134,71 @@
  [커스텀태그 코드](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC/blob/f6071d78fb71de21d98be24cc1e487097b8e79fa/Picstory/src/main/java/com/picstory/service/PicstoryService.java)
 
 </details>
+<br/>
+<details>
+<summary>트러블 슈팅</summary>
+	
+#### 1. 도커환경 구축
+<br/>
+> - 도커이미지 빌드 시 에러
+<br/>
+![image]()
+
+<br/>
+> Docker를 실행하는 사용자가 Docker 데몬에 액세스할 수 있는 권한이 없기 때문에 사용자가 Docker 그룹에 속해있지 않거나 sudo를 사용하지 않고 Docker 명령을 실행하는 경우에 발생하는 에러
+
+> 해결 : sudo groupadd docker(도커그룹생성) -> sudo usermod -aG docker ${USER} (도커그룹에 유저 추가) -> sudo service docker restart (도커 재시작)
+
+<br/>
+> - 도커파일 빌드 시 에러
+>> - ENV TZ=Asia/Seoul  => 타임존 설정하지 않아 에러
+>> - RUN apt install -y python3-pip  => pip 명령어 설치 : 도커파일 빌드 시 중간에 입력할 수 없으므로 -y
+<br/>
+
+
+#### 2. Flask 서버
+모바일 환경에 최적화를 위해 게시판 형식의 기본 페이징이 아닌, 무한 스크롤 방식을 사용함.
+기존의 페이징은 offset과 limit을 사용해서 페이징할 범위를 정하지만, 이 방식은 초반에는 효율이 나쁘지 않지만 뒤로 갈수록 효율이 급격히 떨어진다는 단점이 있어 사용하지 않고, JPA의 pageable 기능을 사용해 구현했습니다.
+<br/>
+ spring Boot 
+ <br/>
+ @post controller
+ <br/>
+ 
+ ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/65c1da60-66a0-452a-9d12-e09afb0673b0)
+ 
+ <br/>
+ 
+ ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/e83e393c-8f3c-45c5-ba89-ef1f814407f9)
+ 
+<br/>
+
+React 
+
+<br/>
+useInview를 활용하여 페이지 끝에 도달할 시 페이지 넘버를 증가시켜 로드 했습니다.
+
+<br/>
+
+![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/f97031a6-9097-4960-a890-b45568d24586)
+
+<br/>
+
+페이지넘버를 get방식으로 요청해 이미지를 로드 하였습니다.
+
+<br/>
+
+![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/acf1d653-b0b1-471f-ae06-410840c1216f)
+
+<br/>
+
+[코드보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/05e84843bfaef66c4b6417432049e14dc2a611a1/src/components/CommunityMasonry.jsx#L76)
+
+<br/>
+ [느낀점]
+ <br/>
+ JPA를 처음 사용하다 보니 어려움을 겪었으나 수많은 시행착오와 구글링을 통해 구현할 수 있었으며, JPA에 대한 이해도를 올릴 수 있었습니다.
+</details>
 
 
 ## :pushpin: Projects
@@ -222,66 +287,7 @@
  ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/919ebf59-9f54-4013-976c-cf189de56682)
 
 </details>
-<details>
-<summary>트러블 슈팅</summary>
-	
-#### 1. 윈도우에서 
-<br/>
-이메일 인증을 위해 이메일 API인 email.js를 사용했습니다.
-<br/>
 
-![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/deb5ca66-6f01-4579-b827-d50302f7055c)
-
-<br/>
-
-[코드 보러 가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/05e84843bfaef66c4b6417432049e14dc2a611a1/src/components/Join.jsx#L23)
-
-<br/>
-
-
-#### 2. 무한 스크롤 기능 구현
-모바일 환경에 최적화를 위해 게시판 형식의 기본 페이징이 아닌, 무한 스크롤 방식을 사용함.
-기존의 페이징은 offset과 limit을 사용해서 페이징할 범위를 정하지만, 이 방식은 초반에는 효율이 나쁘지 않지만 뒤로 갈수록 효율이 급격히 떨어진다는 단점이 있어 사용하지 않고, JPA의 pageable 기능을 사용해 구현했습니다.
-<br/>
- spring Boot 
- <br/>
- @post controller
- <br/>
- 
- ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/65c1da60-66a0-452a-9d12-e09afb0673b0)
- 
- <br/>
- 
- ![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/e83e393c-8f3c-45c5-ba89-ef1f814407f9)
- 
-<br/>
-
-React 
-
-<br/>
-useInview를 활용하여 페이지 끝에 도달할 시 페이지 넘버를 증가시켜 로드 했습니다.
-
-<br/>
-
-![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/f97031a6-9097-4960-a890-b45568d24586)
-
-<br/>
-
-페이지넘버를 get방식으로 요청해 이미지를 로드 하였습니다.
-
-<br/>
-
-![image](https://github.com/yusuyeon1111/portfolio/assets/142488306/acf1d653-b0b1-471f-ae06-410840c1216f)
-
-<br/>
-
-[코드보러가기](https://github.com/2023-SMHRD-IS-CLOUD-1/Letmein-front/blob/05e84843bfaef66c4b6417432049e14dc2a611a1/src/components/CommunityMasonry.jsx#L76)
-
-<br/>
- [느낀점]
- <br/>
- JPA를 처음 사용하다 보니 어려움을 겪었으나 수많은 시행착오와 구글링을 통해 구현할 수 있었으며, JPA에 대한 이해도를 올릴 수 있었습니다.
-</details>
 	
 #### 1. 이메일 API 사용
 <br/>

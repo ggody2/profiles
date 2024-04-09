@@ -26,13 +26,13 @@
 >> - Language : python3  
 >> - Skill : Django, Django-rest-framework, PostgreSQL
 >> 
->> [프로젝트 상세 설명(Back-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC.git)  
+>> [프로젝트 상세 설명(Back-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/NailArt.git)  
 >
 >> Front-end
 >> - Language : javascript
 >> - Skill : React.js
 >>
->> [프로젝트 상세 설명(Front-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/PicStoryReact.git)
+>> [프로젝트 상세 설명(Front-end)](https://github.com/2023-SMHRD-IS-CLOUD-1/NailArt.git)
 
 <br />
 

@@ -14,13 +14,13 @@
 
 </br>
 
-# 📝Projects
+# :pushpin: Projects
 
 ## 1. 🫳 NailArt
 > 이미지오버레이를 통한 디자인입히기 및 가게추천 (핵심프로젝트)
 >
 > - 개발기간 : 23.10.25 ~ 23.12.08
-> - 핵심 역할 : 전체적인 프론트 총괄, 메인페이지 & 마이페이지 & 가게등록페이지 화면구성 및 기능
+> - 핵심 역할 : 전체적인 프론트 총괄, 메인페이지 & 마이페이지 & 가게등록페이지 프론트 및 백엔드
 >
 >> Back-end
 >> - Language : python3  
@@ -41,7 +41,7 @@
 > AI 기술을 활용한 이미지 태깅 기반의 사진첩 서비스 (실전 프로젝트)
 >
 > - 개발기간 : 2024.2.1 ~ 2024.2.27
-> - 핵심 역할 : python Flask & EC2 & 도커환경 구축 , ai모델들 API생성 & 서빙 , faiss모델 Spring Boot,React와 연결, 결제페이지(I'm port API) & 아이디,비밀번호 찾기페이지 화면구성 및 기능,  회원가입,로그인 페이지 화면구성
+> - 핵심 역할 : Python Flask & AWS EC2 & 도커환경 구축 , ai모델 API생성&연결, 결제페이지&계정찾기페이지 프론트 및 백엔드,  회원가입&로그인 페이지 프론트
 >> 프로젝트 설명
 >> - 사용자가 사진 업로드 시 자동으로 태그를 지정하여 분류하는 서비스를 제공
 >> - 사용자가 폴더 생성 시 태그를 기반으로 사진 분류의 용이성을 제공
@@ -160,13 +160,14 @@
 
 #### 2. Flask 서버
 <br/>
-> - aws 포트 열기
-<br/>
-
-<br/>
-> - serving 코드의 인코딩 문제
-<br/>
-
+> aws 자격증명
+>> s3에 저장된 이미지의 특징벡터를 추출하는 api를 서빙하는 과정에서 아래와 같이 AWS 자격증명관리 오류가 발생
+>> line 418, in add_auth
+    raise NoCredentialsError()
+botocore.exceptions.NoCredentialsError: Unable to locate credentials
+>> 해결 : 구글링을 통해 인스턴스용 IAM 역할을 사용하여 권한을 원활하게 관리하는 방법을 확인하여 시도해봄
+>> AmazonS3FullAccess 정책을 사용해 새로운 IAM 역할을 생성한 후, AWS Management Console을 통해 EC2 인스턴스에 역할을 연결함. 에러 발생 없이 s3에 저장된 이미지에 접근할 수 있게됨.
+>> (참고 : https://bosungtea9416.tistory.com/entry/자격-증명-없이-EC2에서-S3-액세스)
 
 <br/>
 </details>

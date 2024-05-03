@@ -146,7 +146,7 @@
 <br/>
 
 <br/>
-![error](https://github.com/ggody2/profiles/assets/117277864/6df3b020-68ac-4fed-be58-be9c60e5435c)
+<img width="700" src="https://github.com/ggody2/profiles/assets/117277864/6df3b020-68ac-4fed-be58-be9c60e5435c"/> <br/>
 사용자가 Docker 그룹에 속해있지 않거나 sudo를 사용하지 않고 Docker 명령을 실행하는 경우에 발생하는 에러
 
 해결 : sudo groupadd docker(도커그룹생성) -> sudo usermod -aG docker ${USER} (도커그룹에 유저 추가) -> sudo service docker restart (도커 재시작)

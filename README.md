@@ -144,9 +144,9 @@
 <br/>
 도커이미지 빌드 시 에러
 <br/>
-![image]()
 
 <br/>
+![error](https://github.com/ggody2/profiles/assets/117277864/6df3b020-68ac-4fed-be58-be9c60e5435c)
 사용자가 Docker 그룹에 속해있지 않거나 sudo를 사용하지 않고 Docker 명령을 실행하는 경우에 발생하는 에러
 
 해결 : sudo groupadd docker(도커그룹생성) -> sudo usermod -aG docker ${USER} (도커그룹에 유저 추가) -> sudo service docker restart (도커 재시작)
@@ -165,9 +165,9 @@
  line 418, in add_auth
     raise NoCredentialsError()
  botocore.exceptions.NoCredentialsError: Unable to locate credentials
- 해결 : 구글링을 통해 인스턴스용 IAM 역할을 사용하여 권한을 원활하게 관리하는 방법을 확인하여 시도해봄
->> AmazonS3FullAccess 정책을 사용해 새로운 IAM 역할을 생성한 후, AWS Management Console을 통해 EC2 인스턴스에 역할을 연결함. 에러 발생 없이 s3에 저장된 이미지에 접근할 수 있게됨.
->> (참고 : https://bosungtea9416.tistory.com/entry/자격-증명-없이-EC2에서-S3-액세스)
+- 해결 : 구글링을 통해 인스턴스용 IAM 역할을 사용하여 권한을 원활하게 관리하는 방법을 확인하여 시도해봄
+- AmazonS3FullAccess 정책을 사용해 새로운 IAM 역할을 생성한 후, AWS Management Console을 통해 EC2 인스턴스에 역할을 연결함. 에러 발생 없이 s3에 저장된 이미지에 접근할 수 있게됨.
+- (참고 : https://bosungtea9416.tistory.com/entry/자격-증명-없이-EC2에서-S3-액세스)
 
 <br/>
 </details>

@@ -160,11 +160,11 @@
 
 #### 2. Flask 서버
 <br/>
- aws 자격증명
+ aws 자격증명 <br/>
 - s3에 저장된 이미지의 특징벡터를 추출하는 api를 서빙하는 과정에서 아래와 같이 AWS 자격증명관리 오류가 발생 <br/>
  line 418, in add_auth
     raise NoCredentialsError()
- botocore.exceptions.NoCredentialsError: Unable to locate credentials <br/>
+ botocore.exceptions.NoCredentialsError: Unable to locate credentials <br/><br/>
 - 해결 : 구글링을 통해 인스턴스용 IAM 역할을 사용하여 권한을 원활하게 관리하는 방법을 확인하여 시도해봄 <br/>
 - AmazonS3FullAccess 정책을 사용해 새로운 IAM 역할을 생성한 후, AWS Management Console을 통해 EC2 인스턴스에 역할을 연결함. 에러 발생 없이 s3에 저장된 이미지에 접근할 수 있게됨. <br/>
 - (참고 : https://bosungtea9416.tistory.com/entry/자격-증명-없이-EC2에서-S3-액세스)

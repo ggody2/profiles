@@ -74,19 +74,7 @@
 >>> - Zeroshot detection(GroundingDINO) : 이미지와 태그목록을 모델에 입력하면 태그목록 중에서 이미지에서 검출한 태그들을 출력함
 >>> - VQA(Blip) : 이미지와 질문(텍스트)를 모델에 입력하면 하면 질문의 결과를 'yes' or 'no'로 응답하여 'yes'에 해당하는 이미지를 출력하게함으로써 사용자에게 커스텀태그 기능을 부여함.
 >
-<div align="center">
-	<h3>기술스택</h3>
-	<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
-	<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
-	<br/>
-	<img src="https://img.shields.io/badge/apachetomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black"/>
-	<img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
-	<br/>
-	<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-	<img src="https://img.shields.io/badge/amazons3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"/>
-	<img src="https://img.shields.io/badge/AWS EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white">
-	<img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
-</div>
+
 
 <br />
 <br />
@@ -135,39 +123,20 @@
 
  [커스텀태그 코드](https://github.com/2023-SMHRD-IS-CLOUD-1/SpringCoC/blob/f6071d78fb71de21d98be24cc1e487097b8e79fa/Picstory/src/main/java/com/picstory/service/PicstoryService.java)
 
-</details>
 <br/>
-<details>
-<summary>트러블 슈팅</summary>
-	
-#### 1. 도커환경 구축
-<br/>
-도커이미지 빌드 시 에러
 <br/>
 
-<br/>
-<img width="700" src="https://github.com/ggody2/profiles/assets/117277864/6df3b020-68ac-4fed-be58-be9c60e5435c"/> <br/>
-사용자가 Docker 그룹에 속해있지 않거나 sudo를 사용하지 않고 Docker 명령을 실행하는 경우에 발생하는 에러
+ <div align="center">
+	<h3>기술스택</h3>
+	<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
+	<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
+	<br/>
+	<img src="https://img.shields.io/badge/apachetomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black"/>
+	<img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
+	<br/>
+	<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
+	<img src="https://img.shields.io/badge/amazons3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"/>
+	<img src="https://img.shields.io/badge/AWS EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white">
+	<img src="https://img.shields.io/badge/oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
+</div>
 
-해결 : sudo groupadd docker(도커그룹생성) -> sudo usermod -aG docker ${USER} (도커그룹에 유저 추가) -> sudo service docker restart (도커 재시작)
-
-<br/>
-도커파일 빌드 시 에러
- - ENV TZ=Asia/Seoul  => 타임존 설정하지 않아 에러
- - RUN apt install -y python3-pip  => pip 명령어 설치 : 도커파일 빌드 시 중간에 입력할 수 없으므로 -y
-<br/>
-
-
-#### 2. Flask 서버
-<br/>
- aws 자격증명 <br/>
-- s3에 저장된 이미지의 특징벡터를 추출하는 api를 서빙하는 과정에서 아래와 같이 AWS 자격증명관리 오류가 발생 <br/>
- line 418, in add_auth
-    raise NoCredentialsError()
- botocore.exceptions.NoCredentialsError: Unable to locate credentials <br/><br/>
-- 해결 : 구글링을 통해 인스턴스용 IAM 역할을 사용하여 권한을 원활하게 관리하는 방법을 확인하여 시도해봄 <br/>
-- AmazonS3FullAccess 정책을 사용해 새로운 IAM 역할을 생성한 후, AWS Management Console을 통해 EC2 인스턴스에 역할을 연결함. 에러 발생 없이 s3에 저장된 이미지에 접근할 수 있게됨. <br/>
-- (참고 : https://bosungtea9416.tistory.com/entry/자격-증명-없이-EC2에서-S3-액세스)
-
-<br/>
-</details>

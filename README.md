@@ -36,7 +36,7 @@
 
 <br />
 
-## 2. 📸 Picstory
+## 2. 📸 Picstory   - [자세히](https://www.notion.so/Picstory-Project-1305d1fd5ff5479395bbf9da80fc8c44?pvs=4)
 
 > AI 기술을 활용한 이미지 태깅 기반의 사진첩 서비스 (실전 프로젝트)
 >
